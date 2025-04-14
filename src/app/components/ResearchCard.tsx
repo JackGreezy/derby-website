@@ -1,6 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
+import HoverCard from './HoverCard';
 
 export default function ResearchCard({
     title,
