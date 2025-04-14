@@ -29,20 +29,18 @@ export default function Home() {
                     chimpanzees.
                   </p>
                   <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
-                    <a
+                    <Link
                       href="/cv.pdf"
-                      target="_blank"
-                      rel="noopener noreferrer"
                       className="bg-ut-orange text-white px-6 py-3 rounded-md text-center hover:bg-ut-orange/90 transition-colors"
                     >
                       View CV
-                    </a>
-                    <a
+                    </Link>
+                    <Link
                       href="mailto:rnderbs@utexas.edu"
                       className="bg-white text-gray-800 px-6 py-3 rounded-md border text-center hover:bg-gray-50 transition-colors"
                     >
                       Contact Me
-                    </a>
+                    </Link>
                   </div>
                 </div>
                 <div className="w-full md:w-auto md:flex-1">

@@ -1,8 +1,10 @@
 import { Metadata } from 'next';
+import { Inter } from 'next/font/google';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
-import GorillaLoader from './components/GorillaLoader';
 import './globals.css';
+
+const inter = Inter({ subsets: ['latin'] });
 
 // Export metadata as a server component
 export const metadata: Metadata = {
@@ -29,10 +31,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className="bg-gray-50">
-        <GorillaLoader />
+      <body className={`${inter.className} bg-gray-50`}>
         <Navbar />
-        <main className="container mx-auto px-4 py-8">
+        <main className="min-h-screen">
           {children}
         </main>
         <Footer />
