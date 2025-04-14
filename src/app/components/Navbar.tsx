@@ -1,20 +1,13 @@
 'use client';
 
+import { useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import { usePathname } from 'next/navigation';
 import { motion } from 'framer-motion';
-
-const navItems = [
-    { name: 'Home', path: '/' },
-    { name: 'Research', path: '/research' },
-    { name: 'Publications', path: '/publications' },
-    { name: 'Media', path: '/media' },
-    { name: 'Gallery', path: '/gallery' },
-    { name: 'Contact', path: '/contact' },
-];
+import { usePathname } from 'next/navigation';
 
 export default function Navbar() {
+    const [isMenuOpen, setIsMenuOpen] = useState(false);
     const pathname = usePathname();
 
     return (
@@ -37,27 +30,62 @@ export default function Navbar() {
                         </motion.div>
                     </Link>
 
+                    {/* Desktop Navigation */}
                     <div className="hidden md:flex space-x-8">
-                        {navItems.map((item) => (
+                        {['Home', 'Research', 'Publications', 'Media', 'Gallery', 'Contact'].map((item) => (
                             <Link
-                                key={item.path}
-                                href={item.path}
-                                className="relative group"
+                                key={item}
+                                href={item === 'Home' ? '/' : `/${item.toLowerCase()}`}
+                                className={`relative transition-colors hover:text-ut-orange ${pathname === (item === 'Home' ? '/' : `/${item.toLowerCase()}`)
+                                        ? 'text-ut-orange'
+                                        : 'text-gray-800'
+                                    }`}
                             >
-                                <span className={`text-gray-800 hover:text-ut-orange transition-colors ${pathname === item.path ? 'text-ut-orange' : ''
-                                    }`}>
-                                    {item.name}
-                                </span>
-                                {pathname === item.path && (
-                                    <motion.div
-                                        layoutId="underline"
-                                        className="absolute left-0 right-0 h-0.5 bg-ut-orange bottom-[-4px]"
-                                    />
-                                )}
+                                {item}
                             </Link>
                         ))}
                     </div>
+
+                    {/* Mobile Menu Button */}
+                    <button
+                        className="md:hidden p-2"
+                        onClick={() => setIsMenuOpen(!isMenuOpen)}
+                        aria-label="Toggle menu"
+                    >
+                        {!isMenuOpen ? (
+                            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+                            </svg>
+                        ) : (
+                            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                            </svg>
+                        )}
+                    </button>
                 </div>
+
+                {/* Mobile Menu */}
+                <motion.div
+                    initial={false}
+                    animate={isMenuOpen ? { height: 'auto', opacity: 1 } : { height: 0, opacity: 0 }}
+                    className="md:hidden overflow-hidden"
+                >
+                    <div className="py-4 space-y-4">
+                        {['Home', 'Research', 'Publications', 'Media', 'Gallery', 'Contact'].map((item) => (
+                            <Link
+                                key={item}
+                                href={item === 'Home' ? '/' : `/${item.toLowerCase()}`}
+                                className={`block px-4 py-2 text-lg ${pathname === (item === 'Home' ? '/' : `/${item.toLowerCase()}`)
+                                        ? 'text-ut-orange'
+                                        : 'text-gray-800'
+                                    }`}
+                                onClick={() => setIsMenuOpen(false)}
+                            >
+                                {item}
+                            </Link>
+                        ))}
+                    </div>
+                </motion.div>
             </div>
         </nav>
     );

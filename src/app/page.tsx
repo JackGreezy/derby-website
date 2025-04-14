@@ -7,19 +7,19 @@ import ScrollProgress from './components/ScrollProgress';
 
 export default function Home() {
   return (
-    <div className="max-w-4xl mx-auto space-y-24">
+    <div className="max-w-4xl mx-auto px-4">
       <ScrollProgress />
 
       <PageTransition>
         <div className="min-h-screen max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 pt-32 pb-16">
           {/* Hero Section */}
-          <section className="mb-32">
+          <section className="pt-8 md:pt-16 pb-16 md:pb-24">
             <ClientAnimationWrapper>
-              <div className="flex flex-col md:flex-row items-center gap-12">
-                <div className="flex-1 space-y-6">
+              <div className="flex flex-col-reverse md:flex-row items-center gap-8 md:gap-12">
+                <div className="flex-1 space-y-6 text-center md:text-left">
                   <div>
                     <span className="text-3xl">👋</span>
-                    <h1 className="text-4xl font-bold mt-4">Hello, I am Riley Derby</h1>
+                    <h1 className="text-3xl md:text-4xl font-bold mt-4">Hello, I am Riley Derby</h1>
                   </div>
                   <p className="text-gray-700 text-lg">
                     I am a PhD Candidate in Biological Anthropology at UT Austin,
@@ -27,29 +27,29 @@ export default function Home() {
                     research combines field studies of wild mountain gorillas and
                     chimpanzees.
                   </p>
-                  <div className="flex gap-4">
+                  <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
                     <a
                       href="/cv"
-                      className="bg-ut-orange text-white px-6 py-3 rounded-md hover:bg-ut-orange/90 transition-colors"
+                      className="bg-ut-orange text-white px-6 py-3 rounded-md text-center hover:bg-ut-orange/90 transition-colors"
                     >
                       View CV
                     </a>
                     <a
                       href="/contact"
-                      className="bg-white text-gray-800 px-6 py-3 rounded-md border hover:bg-gray-50 transition-colors"
+                      className="bg-white text-gray-800 px-6 py-3 rounded-md border text-center hover:bg-gray-50 transition-colors"
                     >
                       Contact Me
                     </a>
                   </div>
                 </div>
-                <div className="flex-1">
+                <div className="w-full md:w-auto md:flex-1">
                   <Image
                     src="/riley-derby.jpg"
                     alt="Riley Derby"
                     width={500}
                     height={500}
-                    className="rounded-2xl shadow-lg"
                     priority
+                    className="rounded-2xl shadow-lg w-full max-w-[300px] mx-auto md:max-w-none"
                   />
                 </div>
               </div>
@@ -186,7 +186,7 @@ export default function Home() {
           <section className="mb-32">
             <ClientAnimationWrapper>
               <div className="flex items-center gap-3 mb-10">
-                <span className="text-3xl">🏆</span>
+                <span className="text-3xl">🎓</span>
                 <h2 className="text-3xl font-bold">Current Mentees</h2>
               </div>
               <HoverCard>
