@@ -4,6 +4,7 @@ import PageTransition from './components/PageTransition';
 import AnimatedSection from './components/AnimatedSection';
 import HoverCard from './components/HoverCard';
 import ScrollProgress from './components/ScrollProgress';
+import Link from 'next/link';
 
 export default function Home() {
   return (
@@ -29,13 +30,15 @@ export default function Home() {
                   </p>
                   <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
                     <a
-                      href="/cv"
+                      href="/cv.pdf"
+                      target="_blank"
+                      rel="noopener noreferrer"
                       className="bg-ut-orange text-white px-6 py-3 rounded-md text-center hover:bg-ut-orange/90 transition-colors"
                     >
                       View CV
                     </a>
                     <a
-                      href="/contact"
+                      href="mailto:rnderbs@utexas.edu"
                       className="bg-white text-gray-800 px-6 py-3 rounded-md border text-center hover:bg-gray-50 transition-colors"
                     >
                       Contact Me
@@ -92,18 +95,29 @@ export default function Home() {
                 <h2 className="text-3xl font-bold">Research Experience</h2>
               </div>
               <div className="grid md:grid-cols-2 gap-8">
-                <div className="space-y-4">
+                <a
+                  href="https://www.bwindiimpenetrablenationalpark.com/information/great-ape-project/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block bg-white rounded-xl p-8 shadow-sm hover:shadow-lg transition-all"
+                >
                   <h3 className="text-xl font-semibold text-ut-orange">Bwindi Gorilla Project</h3>
-                  <p className="text-gray-700">
+                  <p className="text-gray-700 mt-4">
                     Conducting behavioral data collection and sample analysis on mountain gorillas in one of Africa's most unique primate habitats.
                   </p>
-                </div>
-                <div className="space-y-4">
+                </a>
+
+                <a
+                  href="http://ngogochimpanzeeproject.org/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block bg-white rounded-xl p-8 shadow-sm hover:shadow-lg transition-all"
+                >
                   <h3 className="text-xl font-semibold text-ut-orange">Ngogo Chimpanzee Project</h3>
-                  <p className="text-gray-700">
+                  <p className="text-gray-700 mt-4">
                     Contributing to primate behavior research, studying physical and social development patterns in wild chimpanzees.
                   </p>
-                </div>
+                </a>
               </div>
             </ClientAnimationWrapper>
           </section>

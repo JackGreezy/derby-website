@@ -1,7 +1,6 @@
 'use client';
 
-import { motion } from 'framer-motion';
-import HoverCard from './HoverCard';
+import Link from 'next/link';
 
 export default function ResearchCard({
     title,
@@ -13,24 +12,17 @@ export default function ResearchCard({
     link: string;
 }) {
     return (
-        <motion.a
+        <Link
             href={link}
             target="_blank"
             rel="noopener noreferrer"
-            whileHover={{ scale: 1.02 }}
-            whileTap={{ scale: 0.98 }}
-            className="block"
+            className="block bg-white rounded-xl p-8 shadow-sm hover:shadow-lg transition-all"
         >
-            <HoverCard>
-                <h3 className="text-xl font-semibold mb-3">{title}</h3>
-                <p className="text-gray-600">{description}</p>
-                <motion.span
-                    className="text-ut-orange mt-4 inline-block"
-                    whileHover={{ x: 5 }}
-                >
-                    Learn more →
-                </motion.span>
-            </HoverCard>
-        </motion.a>
+            <h3 className="text-xl font-semibold mb-3">{title}</h3>
+            <p className="text-gray-600">{description}</p>
+            <span className="text-ut-orange mt-4 inline-block">
+                Learn more →
+            </span>
+        </Link>
     );
 } 
