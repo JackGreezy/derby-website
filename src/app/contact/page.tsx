@@ -2,7 +2,7 @@ import PageLayout from '../components/PageLayout';
 
 export default function Contact() {
     return (
-        <PageLayout title="Contact">
+        <PageLayout title="Contact Me">
             <div className="max-w-2xl">
                 <form className="space-y-6 bg-white rounded-lg p-8 shadow-sm">
                     <div>
