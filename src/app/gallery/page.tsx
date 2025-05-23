@@ -6,28 +6,26 @@ import PageLayout from '../components/PageLayout';
 export default function Gallery() {
     const images = [
         {
-            src: '/gallery/derby-in-the-wild.jpg',  // Fixed the file extension
+            src: '/gallery/derby-in-the-wild.jpg',
             alt: 'Riley Derby in the field with gorilla',
-            caption: 'Field research with mountain gorillas in Bwindi'
+            caption: 'Riley Derby conducting field research with mountain gorillas in Bwindi.'
         },
-        { src: '/Website_Derby/urine1.jpg', alt: 'urine1.jpg', caption: 'urine1.jpg' },
-        { src: '/Website_Derby/headshot_2.jpg', alt: 'headshot_2.jpg', caption: 'headshot_2.jpg' },
-        { src: '/Website_Derby/headshot.jpg', alt: 'headshot.jpg', caption: 'headshot.jpg' },
-        { src: '/Website_Derby/Rolex Grant_2024_DerbyR_Bwindi_6_RDerby.JPG', alt: 'Rolex Grant_2024_DerbyR_Bwindi_6_RDerby.JPG', caption: 'Rolex Grant_2024_DerbyR_Bwindi_6_RDerby.JPG' },
-        { src: '/Website_Derby/Rolex Grant_2024_DerbyR_Bwindi_5_RDerby.jpg', alt: 'Rolex Grant_2024_DerbyR_Bwindi_5_RDerby.jpg', caption: 'Rolex Grant_2024_DerbyR_Bwindi_5_RDerby.jpg' },
-        { src: '/Website_Derby/Rolex Grant_2024_DerbyR_Bwindi_3_RDerby.jpg', alt: 'Rolex Grant_2024_DerbyR_Bwindi_3_RDerby.jpg', caption: 'Rolex Grant_2024_DerbyR_Bwindi_3_RDerby.jpg' },
-        { src: '/Website_Derby/Riley_Joshua.jpg', alt: 'Riley_Joshua.jpg', caption: 'Riley_Joshua.jpg' },
-        { src: '/Website_Derby/IMG_9545.jpeg', alt: 'IMG_9545.jpg', caption: 'IMG_9545.jpg' },
-        { src: '/Website_Derby/IMG_4683.jpeg', alt: 'IMG_4683.jpg', caption: 'IMG_4683.jpg' },
-        { src: '/Website_Derby/IMG_4682.jpeg', alt: 'IMG_4682.jpg', caption: 'IMG_4682.jpg' },
-        { src: '/Website_Derby/IMG_4681.jpeg', alt: 'IMG_4681.jpg', caption: 'IMG_4681.jpg' },
-        { src: '/Website_Derby/IMG_0302.JPEG', alt: 'IMG_0302.JPEG', caption: 'IMG_0302.JPEG' },
-        { src: '/Website_Derby/IMG_0292.JPEG', alt: 'IMG_0292.JPEG', caption: 'IMG_0292.JPEG' },
-        { src: '/Website_Derby/DSC00289.JPG', alt: 'DSC00289.JPG', caption: 'DSC00289.JPG' },
-        { src: '/Website_Derby/DSC00252.JPG', alt: 'DSC00252.JPG', caption: 'DSC00252.JPG' },
-        { src: '/Website_Derby/455556dc-2ec1-40ef-bb51-7af09aa4aee7.JPG', alt: '455556dc-2ec1-40ef-bb51-7af09aa4aee7.JPG', caption: '455556dc-2ec1-40ef-bb51-7af09aa4aee7.JPG' },
-        { src: '/Website_Derby/20240104_102922.jpg', alt: '20240104_102922.jpg', caption: '20240104_102922.jpg' },
-        { src: '/Website_Derby/20231229_185630.jpg', alt: '20231229_185630.jpg', caption: '20231229_185630.jpg' },
+        { src: '/Website_Derby/urine1.jpg', alt: 'urine1.jpg', caption: 'Collecting a urine sample for hormonal analyses.' },
+        { src: '/Website_Derby/headshot.jpg', alt: 'headshot.jpg', caption: 'Spending time with silverback Kaganga.' },
+        { src: '/Website_Derby/Rolex Grant_2024_DerbyR_Bwindi_6_RDerby.JPG', alt: 'Rolex Grant_2024_DerbyR_Bwindi_6_RDerby.JPG', caption: 'Collecting behavioral data on Kadogo the gorilla.' },
+        { src: '/Website_Derby/Rolex Grant_2024_DerbyR_Bwindi_3_RDerby.jpg', alt: 'Rolex Grant_2024_DerbyR_Bwindi_3_RDerby.jpg', caption: 'Mufuruki, an adolescent gorilla I study.' },
+        { src: '/Website_Derby/Riley_Joshua.jpg', alt: 'Riley_Joshua.jpg', caption: 'Working alongside Joshua in the forest.' },
+        { src: '/Website_Derby/IMG_9545.jpeg', alt: 'IMG_9545.jpg', caption: 'Teaching a primate behavior workshop to Ugandan students in Kibale National Park.' },
+        { src: '/Website_Derby/IMG_4683.jpeg', alt: 'IMG_4683.jpg', caption: 'Hosting a primatology educational activity on STEM night at a local Austin school.' },
+        { src: '/Website_Derby/IMG_4682.jpeg', alt: 'IMG_4682.jpg', caption: 'Hosting a primatology educational activity on STEM night at a local Austin school.' },
+        { src: '/Website_Derby/IMG_4681.jpeg', alt: 'IMG_4681.jpg', caption: 'Hosting a primatology educational activity on STEM night at a local Austin school.' },
+        { src: '/Website_Derby/IMG_0302.JPEG', alt: 'IMG_0302.JPEG', caption: 'Partnering with the Uganda Lacrosse Association to expand the game across Uganda.' },
+        { src: '/Website_Derby/IMG_0292.JPEG', alt: 'IMG_0292.JPEG', caption: 'Partnering with the Uganda Lacrosse Association to expand the game across Uganda.' },
+        { src: '/Website_Derby/DSC00289.JPG', alt: 'DSC00289.JPG', caption: 'Kadogo, a young gorilla, in the bush.' },
+        { src: '/Website_Derby/DSC00252.JPG', alt: 'DSC00252.JPG', caption: 'Kakuto, an adolescent male gorilla, resting.' },
+        { src: '/Website_Derby/455556dc-2ec1-40ef-bb51-7af09aa4aee7.JPG', alt: '455556dc-2ec1-40ef-bb51-7af09aa4aee7.JPG', caption: 'Primate conservation workshop in Kibale National Park.' },
+        { src: '/Website_Derby/20240104_102922.jpg', alt: '20240104_102922.jpg', caption: 'Following a mountain gorilla through the thick bush at Bwindi.' },
+        { src: '/Website_Derby/20231229_185630.jpg', alt: '20231229_185630.jpg', caption: 'Watching Kadogo and his group in the sun.' },
     ];
 
     const [modalOpen, setModalOpen] = useState(false);
@@ -56,8 +54,9 @@ export default function Gallery() {
                                 alt={image.alt}
                                 fill
                                 sizes="(max-width: 768px) 100vw, 33vw"
-                                className={`object-cover transition-transform duration-300 group-hover:scale-105 ${image.src.includes('Riley_Joshua.jpg') ? 'object-center' : ''
+                                className={`object-cover transition-transform duration-300 group-hover:scale-105 ${image.src.includes('Riley_Joshua.jpg') ? 'object-[center_20%]' : ''
                                     } ${image.src.includes('IMG_0292.JPEG') ? 'object-[center_30%]' : ''
+                                    } ${image.src.includes('IMG_0302.JPEG') ? 'object-[center_15%]' : ''
                                     }`}
                                 priority
                             />
@@ -97,8 +96,9 @@ export default function Gallery() {
                                 alt={images[currentIndex].alt}
                                 fill
                                 sizes="100vw"
-                                className={`object-contain md:object-cover ${images[currentIndex].src.includes('Riley_Joshua.jpg') ? 'object-center' : ''
+                                className={`object-contain md:object-cover ${images[currentIndex].src.includes('Riley_Joshua.jpg') ? 'object-[center_20%]' : ''
                                     } ${images[currentIndex].src.includes('IMG_0292.JPEG') ? 'object-[center_30%]' : ''
+                                    } ${images[currentIndex].src.includes('IMG_0302.JPEG') ? 'object-[center_15%]' : ''
                                     }`}
                                 loading="eager"
                             />
