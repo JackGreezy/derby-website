@@ -31,18 +31,22 @@ export default function Navbar() {
                             { name: 'Research', path: '/research' },
                             { name: 'Publications', path: '/publications' },
                             { name: 'Media', path: '/media' },
-                            { name: 'Gallery', path: '/gallery' },
-                            { name: 'Contact', path: '/contact' }
+                            { name: 'Gallery', path: '/gallery' }
                         ].map((item) => (
                             <Link
                                 key={item.name}
                                 href={item.path}
-                                className={`text-gray-800 hover:text-ut-orange transition-colors ${pathname === item.path ? 'text-ut-orange' : ''
-                                    }`}
+                                className={`text-gray-800 hover:text-ut-orange transition-colors ${pathname === item.path ? 'text-ut-orange' : ''}`}
                             >
                                 {item.name}
                             </Link>
                         ))}
+                        <a
+                            href="mailto:rnderbs@utexas.edu"
+                            className="text-gray-800 hover:text-ut-orange transition-colors"
+                        >
+                            Contact
+                        </a>
                     </div>
 
                     {/* Mobile Menu Button */}
@@ -70,8 +74,7 @@ export default function Navbar() {
                             { name: 'Research', path: '/research' },
                             { name: 'Publications', path: '/publications' },
                             { name: 'Media', path: '/media' },
-                            { name: 'Gallery', path: '/gallery' },
-                            { name: 'Contact', path: '/contact' }
+                            { name: 'Gallery', path: '/gallery' }
                         ].map((item) => (
                             <Link
                                 key={item.name}
@@ -82,6 +85,13 @@ export default function Navbar() {
                                 {item.name}
                             </Link>
                         ))}
+                        <a
+                            href="mailto:rnderbs@utexas.edu"
+                            className="block py-2 text-gray-800 hover:text-ut-orange"
+                            onClick={() => setIsMenuOpen(false)}
+                        >
+                            Contact
+                        </a>
                     </div>
                 )}
             </div>
