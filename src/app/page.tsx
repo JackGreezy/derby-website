@@ -45,7 +45,7 @@ export default function Home() {
                 </div>
                 <div className="w-full md:w-auto md:flex-1">
                   <Image
-                    src="/riley-derby.jpg"
+                    src="/hero.png"
                     alt="Riley Derby"
                     width={500}
                     height={500}
@@ -163,10 +163,21 @@ export default function Home() {
               </div>
               <HoverCard>
                 <div className="space-y-6">
-                  <div>
-                    <h3 className="text-xl font-semibold">Joshua Kyobe</h3>
-                    <p className="text-gray-600">Research focus: Primate behavior and conservation</p>
-                    <p className="text-sm text-gray-500">Expected graduation: 2025</p>
+                  <div className="flex flex-col md:flex-row items-center gap-6">
+                    <div className="flex-1 text-center md:text-left">
+                      <h3 className="text-xl font-semibold">Joshua Kyobe</h3>
+                      <p className="text-gray-600">Research focus: Primate behavior and conservation</p>
+                      <p className="text-sm text-gray-500">Expected graduation: 2025</p>
+                    </div>
+                    <div className="flex-1 flex justify-center md:justify-end w-full">
+                      <Image
+                        src="/Website_Derby/Riley_Joshua.jpg"
+                        alt="Riley Derby and Joshua Kyobe together"
+                        width={350}
+                        height={350}
+                        className="rounded-xl shadow-md object-cover max-w-full h-auto"
+                      />
+                    </div>
                   </div>
                 </div>
               </HoverCard>
