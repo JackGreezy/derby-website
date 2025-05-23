@@ -73,7 +73,6 @@ export default function Home() {
                 <div className="border-l-4 border-ut-orange pl-6">
                   <h3 className="text-xl font-semibold">M.S. in Primate Behavior and Ecology</h3>
                   <p className="text-gray-600 mt-1">Central Washington University | 2019-2021</p>
-                  <p className="text-green-600 mt-1">Perfect GPA: 4.0</p>
                 </div>
 
                 <div className="border-l-4 border-ut-orange pl-6">
@@ -155,45 +154,6 @@ export default function Home() {
             </ClientAnimationWrapper>
           </section>
 
-          {/* Awards & Recognition */}
-          <section className="mb-32">
-            <ClientAnimationWrapper>
-              <div className="flex items-center gap-3 mb-10">
-                <span className="text-3xl">🏆</span>
-                <h2 className="text-3xl font-bold">Awards & Recognition</h2>
-              </div>
-              <HoverCard>
-                <div className="space-y-6">
-                  <div className="space-y-4">
-                    <div className="flex items-start gap-3">
-                      <span className="text-2xl">🎯</span>
-                      <div>
-                        <h3 className="text-xl font-semibold">Perfect GPA in Master's Program</h3>
-                        <p className="text-gray-600">Central Washington University</p>
-                      </div>
-                    </div>
-
-                    <div className="flex items-start gap-3">
-                      <span className="text-2xl">⭐</span>
-                      <div>
-                        <h3 className="text-xl font-semibold">World Top Scientists Best Researcher Award in Primatology</h3>
-                        <p className="text-gray-600">2024</p>
-                      </div>
-                    </div>
-
-                    <div className="flex items-start gap-3">
-                      <span className="text-2xl">🎤</span>
-                      <div>
-                        <h3 className="text-xl font-semibold">Multiple Conference Presentations</h3>
-                        <p className="text-gray-600">Including prestigious workshops and research symposiums</p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </HoverCard>
-            </ClientAnimationWrapper>
-          </section>
-
           {/* Current Mentees */}
           <section className="mb-32">
             <ClientAnimationWrapper>
@@ -204,38 +164,44 @@ export default function Home() {
               <HoverCard>
                 <div className="space-y-6">
                   <div>
-                    <h3 className="text-xl font-semibold">PhD Candidate Name</h3>
-                    <p className="text-gray-600">Research focus area</p>
-                    <p className="text-sm text-gray-500">Expected graduation: Year</p>
+                    <h3 className="text-xl font-semibold">Joshua Kyobe</h3>
+                    <p className="text-gray-600">Research focus: Primate behavior and conservation</p>
+                    <p className="text-sm text-gray-500">Expected graduation: 2025</p>
                   </div>
                 </div>
               </HoverCard>
             </ClientAnimationWrapper>
           </section>
 
-          {/* Athletics */}
+          {/* Community Outreach */}
           <section className="mb-32">
             <ClientAnimationWrapper>
               <div className="flex items-center gap-3 mb-10">
-                <span className="text-3xl">🥍</span>
-                <h2 className="text-3xl font-bold">Athletics</h2>
+                <span className="text-3xl">🤝</span>
+                <h2 className="text-3xl font-bold">Community Outreach</h2>
               </div>
-              <HoverCard>
-                <div className="space-y-6">
-                  <div>
-                    <h3 className="text-xl font-semibold text-ut-orange">Current Role</h3>
-                    <p className="text-gray-700 mt-2">
-                      Defensive Coordinator for the University of Texas Men's Lacrosse Team
-                    </p>
-                  </div>
-                  <div>
-                    <h3 className="text-xl font-semibold text-ut-orange">Playing Career</h3>
-                    <p className="text-gray-700 mt-2">
-                      Former All-Conference First Team Defensive Midfielder for the Texas Longhorns
-                    </p>
-                  </div>
+              <div className="grid md:grid-cols-2 gap-8">
+                <div className="bg-white rounded-xl p-8 shadow-sm">
+                  <h3 className="text-xl font-semibold text-ut-orange">Educational Programs</h3>
+                  <p className="text-gray-700 mt-4">
+                    Leading interactive educational programs for local elementary schools, introducing students to primatology, conservation, and research methodology through engaging presentations and activities.
+                  </p>
                 </div>
-              </HoverCard>
+
+                <div className="bg-white rounded-xl p-8 shadow-sm">
+                  <h3 className="text-xl font-semibold text-ut-orange">Conservation Workshops</h3>
+                  <p className="text-gray-700 mt-4">
+                    Conducting workshops for first-line communities in Uganda, sharing knowledge about conservation practices and primatological research to foster local engagement and understanding.
+                  </p>
+                </div>
+
+                <div className="bg-white rounded-xl p-8 shadow-sm md:col-span-2">
+                  <h3 className="text-xl font-semibold text-ut-orange">Lacrosse Development Program</h3>
+                  <p className="text-gray-700 mt-4">
+                    Partnering Texas Lacrosse with Uganda Lacrosse to expand athletic opportunities throughout primary and secondary schools in Uganda, promoting sports development and cross-cultural exchange.
+                  </p>
+                </div>
+              </div>
             </ClientAnimationWrapper>
           </section>
         </div>
